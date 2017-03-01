@@ -68,10 +68,8 @@ void usbGenerateDisconnectPulse(void)
     IO_t usbPin = IOGetByTag(IO_TAG(PA12));
     IOConfigGPIO(usbPin, IOCFG_OUT_OD);
 
-    IOHi(usbPin);
+    IOLo(usbPin);
 
     delay(200);
-
-    IOLo(usbPin);
 }
 #endif
